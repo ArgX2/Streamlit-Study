@@ -4,7 +4,7 @@ from PIL import Image
 image = Image.open('alpago.jpg')
 
 st.title("Henlo")
-view = [[100,150,30][50,200,60]]
+view = [[100,150,30],[50,200,60]]
 st.write("## Bar Chart")
 st.bar_chart(view)
 sview = pd.Series(view)
