@@ -17,7 +17,7 @@ st.write('')
 Stack = 0
 
 Name = st.text_input('여기에 이름 입력',Stack)
-st.write(Name)
+st.write("이전에 입력된 값:", Name)
 
 if st.button('확인'):
     NameList[Stack] = Name
