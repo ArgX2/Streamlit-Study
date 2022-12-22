@@ -9,7 +9,7 @@ st.image(image, caption="사진 테스트.")
 
 Num = st.slider('인원 입력 후 버튼 클릭.', 2, 50, 25)
 st.write("현재 설정 된 인원 수:",Num)
-NumList = list(range(Num))
+NumList = [0 for i in range(Num)]
 NameList = list(range(Num))
 
 st.write("")
@@ -42,8 +42,11 @@ if key:
 
     st.write('')
 else:
-    NumList = [int(i) for i in range(Num)]
     NameList = [int(i+1) for i in range(Num)] 
+
+
+if st.button('MIX'):
+        NameList = [chr(i)+"번" for i in range(Num)]
 
 option = st.selectbox(
         '위치 선택 후 변경',
