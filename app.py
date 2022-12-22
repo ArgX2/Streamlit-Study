@@ -59,7 +59,7 @@ if st.button('MIX'):
     Mix() 
     Open = 1
 
-if open:
+if Open:
     option = st.selectbox(
             '위치 선택 후 변경',
             (NameList)
