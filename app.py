@@ -7,16 +7,16 @@ image = Image.open('alpago.jpg')
 st.title("Henlo")
 st.image(image, caption="사진 테스트.")
 
-key = st.checkbox("이름 수정하기")
-
 Num = st.slider('인원 입력 후 버튼 클릭.', 0, 50, 25)
 st.write("현재 설정 된 인원 수:",Num)
 NumList = list(range(Num))
 NameList = list(range(Num))
 
-############
+st.write("")
 
-st.write('')
+key = st.checkbox("이름 수정하기")
+
+
 
 if key:
     
