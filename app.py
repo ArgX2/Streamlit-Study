@@ -18,12 +18,12 @@ Name = st.text_input('여기에 이름 입력')
 st.write(Name)
 
 Stack = 0
-for i in range(Num):
-    if st.button('확인',i):
-        NameList[Stack] = Name
-        Stack+=1
-    else:
-        st.write('입력 후 클릭')
+
+if st.button('확인',i):
+    NameList[Stack] = Name
+    Stack+=1
+else:
+    st.write('입력 후 클릭')
     
 if st.button('초기화'):
     Stack=0
