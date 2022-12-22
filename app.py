@@ -5,8 +5,8 @@ import random
 from PIL import Image
 image = Image.open('alpago.jpg')
 
-st.title("Henlo")
-st.image(image, caption="사진 테스트.")
+st.title("사다리타기")
+st.image(image)
 
 Num = st.slider('인원 입력 후 버튼 클릭.', 2, 50, 25)
 st.write("현재 설정 된 인원 수:",Num)
@@ -54,10 +54,7 @@ def Mix():
         NumList2[i] = NumList[Sv]
         del NumList[Sv]
 
-if st.button('MIX'):
-    Mix()   
-
-
+  
 option = st.selectbox(
         '위치 선택 후 변경',
         (NameList)
@@ -65,3 +62,7 @@ option = st.selectbox(
 
 Mix()
 st.write('선택된 값의 수:', NumList2[NameList.index(option)])
+
+st.write("")
+if st.button('MIX'):
+    Mix() 
