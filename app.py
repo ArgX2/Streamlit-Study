@@ -42,8 +42,8 @@ if key:
 
     st.write('')
 else:
-    NumList = [int(i) for i in range(Num)]
-    NameList = [int(i) for i in range(Num)] 
+    NumList = [int(i+1) for i in range(Num)]
+    NameList = [int(i+1) for i in range(Num)] 
 
 option = st.selectbox(
         '위치 선택 후 변경',
