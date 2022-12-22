@@ -4,9 +4,11 @@ from PIL import Image
 image = Image.open('alpago.jpg')
 
 st.title("Henlo")
-view = [[100,150],[50,200],[200,80]]
-st.write("## Bar Chart")
-st.bar_chart(view)
-sview = pd.Series(view)
-sview
 st.image(image, caption="사진 테스트.")
+
+Num = st.slider('인원 입력 후 버튼 클릭.', 0, 50, 25)
+st.write("현재 설정 된 인원 수:",Num)
+
+Line = list(range(Num))
+sview = pd.Series(Line)
+sview
