@@ -42,11 +42,12 @@ if key:
 
     st.write('')
 else:
-    NumList = [int(i+1) for i in range(Num)]
+    NumList = [int(i) for i in range(Num)]
     NameList = [int(i+1) for i in range(Num)] 
 
 option = st.selectbox(
         '위치 선택 후 변경',
         (NameList)
     )
-st.write('선택된 값의 수:', NumList[option])
+
+st.write('선택된 값의 수:', NumList[option-1])
