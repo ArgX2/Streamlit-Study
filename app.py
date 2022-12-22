@@ -12,9 +12,8 @@ def Mix(NumList, NumList2, Num):
         Sv = random.randrange(0,len(NumList))
         NumList2[i] = NumList[Sv]
         del NumList[Sv]
+    return NumList2    
 
-
-        
 
 st.title("사다리타기")
 st.image(image)
@@ -60,7 +59,7 @@ else:
 Open = 0
 if st.button('MIX'): 
     Open = 1
-    Mix(NumList, NumList2, Num)
+    NumList2 = Mix(NumList, NumList2, Num)
 
 if Open:
     option = st.selectbox(
