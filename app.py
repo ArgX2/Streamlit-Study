@@ -24,16 +24,20 @@ if key:
     Name = st.text_input('여기에 이름 입력',Stack)
     st.write("이전에 입력된 값:", Name)
 
-    if st.button('확인'):
-        NameList[Stack] = Name
-        Stack+=1
+    if Stack <= 0:
+        if st.button('이전'):
+            NameList[Stack] = Name
+            Stack-=1
+    elif Stack >= Num-1:        
+        if st.button('다음'):
+            NameList[Stack] = Name
+            Stack+=1
 
         
     if st.button('초기화'):
         Stack=0
         NumList = [0 for i in range(Num)]
         NameList = ['-' for i in range(Num)]
-
 
     st.write('')
 
