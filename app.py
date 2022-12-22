@@ -58,11 +58,12 @@ else:
 
 Open = 0
 st.write("리스트 1", NumList)
-st.write("리스트 2", NumList2)
 
 if st.button('MIX'): 
     Open = 1
     NumList2 = Mix(NumList, NumList2, Num)
+
+st.write("리스트 2", NumList2)
 
 if Open:
     option = st.selectbox(
