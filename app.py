@@ -56,35 +56,8 @@ else:
     NameList = [(i+1) for i in range(Num)]
 
 
-
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
-
-    col1, col2, col3 = st.columns(3)
-    Split = Num//3
-    with col1:
-        for i in range(0,Split):
-            NameList[i] = st.checkbox(NameList[i])
-            if NameList[i]:
-                st.write(NumList2[NameList.index(option)])
-
-    with col2:
-        for i in range(Split-1,Split*2):
-            NameList[i] = st.checkbox(NameList[i])
-            if NameList[i]:
-                st.write(NumList2[NameList.index(option)])    
-
-    with col3:
-        for i in range(Split*2-1,Num-1):
-            NameList[i] = st.checkbox(NameList[i])
-            if NameList[i]:
-                st.write(NumList2[NameList.index(option)])                     
-
-
+                   
 
 st.write(NumList2)
-option = st.multiselect(
-        '대상 선택',
-        (NameList)
-    )
-st.write('선택된 대상에게 배정된 값:', NumList2[NameList.index(option)])
