@@ -54,15 +54,17 @@ def Mix():
         NumList2[i] = NumList[Sv]
         del NumList[Sv]
 
-  
-option = st.selectbox(
-        '위치 선택 후 변경',
-        (NameList)
-    )
-
-Mix()
-st.write('선택된 값의 수:', NumList2[NameList.index(option)])
-
-st.write("")
+Open = 0
 if st.button('MIX'):
     Mix() 
+    Open = 1
+
+if open:
+    option = st.selectbox(
+            '위치 선택 후 변경',
+            (NameList)
+        )
+
+    st.write('선택된 값의 수:', NumList2[NameList.index(option)])
+
+    st.write("")
