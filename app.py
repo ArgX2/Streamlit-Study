@@ -68,4 +68,4 @@ if st.button('MIX'):
 
     st.write("")
     st.write('선택된 대상에게 배정된 값:', NumList2[NameList.index(option)])
-    st.stop()
+
