@@ -43,7 +43,7 @@ if key:
 
     st.write('')
 else:
-    NameList = [chr(i+1)+"번" for i in range(Num)]
+    NameList = [(i+1)+"번" for i in range(Num)]
 
 
 if st.button('MIX'):
