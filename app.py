@@ -38,4 +38,3 @@ st.write('You selected:', option)
 
 
 
-st.dataframe(sview, width=None, height=40, *, use_container_width=True)
