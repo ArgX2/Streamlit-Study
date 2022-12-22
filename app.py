@@ -22,15 +22,13 @@ Stack = 0
 if st.button('확인'):
     NameList[Stack] = Name
     Stack+=1
-else:
-    st.write('입력 후 클릭')
+
     
 if st.button('초기화'):
     Stack=0
     NumList = [0 for i in range(Num)]
     NameList = ['-' for i in range(Num)]
-else:
-    st.write('초기화')
+
 
 st.write('')
 
