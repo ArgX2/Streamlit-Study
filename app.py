@@ -5,7 +5,6 @@ import random
 from PIL import Image
 img = Image.open('alpago.jpg')
 
-Open = 0
 def Mix(L1, NL2, N):
     L1 = [i for i in range(N)]
     L2 = []
@@ -59,10 +58,9 @@ else:
 
 
 if st.button('MIX'): 
-    Open = 1
+
     NumList2 = Mix(NumList, NumList2, Num)
 
-if Open:
     option = st.selectbox(
             '대상 선택',
             (NameList)
