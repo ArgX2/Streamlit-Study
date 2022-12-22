@@ -58,19 +58,29 @@ else:
 
 
 if st.button('MIX'): 
-
     NumList2 = Mix(NumList, NumList2, Num)
 
-    option = st.selectbox(
-            '대상 선택',
-            (NameList)
-        )
+    option = st.multiselect(
+        '대상 선택',
+        (NameList)
+    )
 
-    st.write("")
-    st.write('선택된 대상에게 배정된 값:', NumList2[NameList.index(option)])
+    col1, col2, col3 = st.columns(3)
+    Split = Num//3
+    with col1:
+        for i in range(0,Split):
+            NameList[i] = st.checkbox(NameList[i])
+            if NameList[i]:
+                st.write(NumList2[NameList.index(option)])
 
-    if st.button('초기화'):
-        Stack=0
-        NumList = [0 for i in range(Num)]
-        NameList = ['-' for i in range(Num)]
+    with col2:
+        for i in range(Split-1,Split*2):
+            NameList[i] = st.checkbox(NameList[i])
+            if NameList[i]:
+                st.write(NumList2[NameList.index(option)])    
 
+    with col3:
+        for i in range(Split*2-1,Num-1):
+            NameList[i] = st.checkbox(NameList[i])
+            if NameList[i]:
+                st.write(NumList2[NameList.index(option)])                     
