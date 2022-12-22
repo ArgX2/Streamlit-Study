@@ -5,6 +5,17 @@ import random
 from PIL import Image
 image = Image.open('alpago.jpg')
 
+def Mix(NumList, NumList2, Num):
+    NumList = [0 for i in range(Num)]
+    NumList2 = []
+    for i in range(Num):
+        Sv = random.randrange(0,len(NumList))
+        NumList2[i] = NumList[Sv]
+        del NumList[Sv]
+
+
+        
+
 st.title("사다리타기")
 st.image(image)
 
@@ -46,18 +57,10 @@ if key:
 else:
     NameList = [(i+1) for i in range(Num)]
 
-def Mix(NumList, NumList2, Num):
-    NumList = [0 for i in range(Num)]
-    NumList2 = []
-    for i in range(Num):
-        Sv = random.randrange(0,len(NumList))
-        NumList2[i] = NumList[Sv]
-        del NumList[Sv]
-
 Open = 0
-if st.button('MIX'):
-    Mix(NumList, NumList2, Num) 
+if st.button('MIX'): 
     Open = 1
+    Mix(NumList, NumList2, Num)
 
 if Open:
     option = st.selectbox(
