@@ -14,10 +14,10 @@ NameList = list(range(Num))
 
 st.write('')
 
-Name = st.text_input('여기에 이름 입력')
-st.write(Name)
-
 Stack = 0
+
+Name = st.text_input('여기에 이름 입력',Stack)
+st.write(Name)
 
 if st.button('확인'):
     NameList[Stack] = Name
