@@ -10,7 +10,7 @@ def Mix(L1, NL2, N):
     L2 = []
     for i in range(N):
         Sv = random.randrange(0,len(L1))
-        L2[i] = L1[Sv]
+        L2.append(L1[Sv])
         del L1[Sv]
     return L2
 
