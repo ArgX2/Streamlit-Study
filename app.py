@@ -19,7 +19,7 @@ st.write(Name)
 
 Stack = 0
 for i in range(Num):
-    if st.button('확인',i):
+    if st.button('확인'+i):
         NameList[Stack] = Name
         Stack+=1
     else:
