@@ -53,11 +53,10 @@ if st.button('MIX'):
         NumList2[i] = NumList[Sv]
         del NumList[Sv]
 
-    NumList = NumList2
 
 option = st.selectbox(
         '위치 선택 후 변경',
         (NameList)
     )
 
-st.write('선택된 값의 수:', NumList[NameList.index(option)])
+st.write('선택된 값의 수:', NumList2[NameList.index(option)])
