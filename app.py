@@ -12,6 +12,6 @@ st.write("현재 설정 된 인원 수:",Num)
 
 Line = list(range(Num))
 sview = pd.DataFrame(
-   columns=('col %d' % i+1 for i in range(Num)))
+   columns=('%d' % (i+1) for i in range(Num)))
 
 st.table(sview)
