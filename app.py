@@ -49,7 +49,7 @@ else:
 def Mix():
     NumList2 = []
     for i in range(Num):
-        Sv = random.randrange(0,len(NumList)-1)
+        Sv = random.randrange(0,len(NumList))
         NumList2[i] = NumList[Sv]
         del NumList[Sv]
 
