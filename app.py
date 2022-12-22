@@ -4,8 +4,8 @@ import numpy as np
 import random
 from PIL import Image
 img = Image.open('alpago.jpg')
-Open = 0
 
+Open = 0
 def Mix(L1, NL2, N):
     L1 = [i for i in range(N)]
     L2 = []
@@ -28,7 +28,6 @@ NumList2 = list()
 st.write("")
 
 key = st.checkbox("이름 수정하기")
-
 
 if key:
     
@@ -65,9 +64,10 @@ if st.button('MIX'):
 
 if Open:
     option = st.selectbox(
-            '위치 선택 후 변경',
+            '대상 선택',
             (NameList)
         )
 
     st.write("")
-    st.write('선택된 값의 수:', NumList2[NameList.index(option)])
+    st.write('선택된 대상에게 배정된 값:', NumList2[NameList.index(option)])
+    st.stop()
