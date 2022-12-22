@@ -12,6 +12,7 @@ Num = st.slider('인원 입력 후 버튼 클릭.', 2, 50, 25)
 st.write("현재 설정 된 인원 수:",Num)
 NumList = [0 for i in range(Num)]
 NameList = list(range(Num))
+NumList2 = []
 
 st.write("")
 
@@ -61,4 +62,5 @@ option = st.selectbox(
         (NameList)
     )
 
+Mix()
 st.write('선택된 값의 수:', NumList2[NameList.index(option)])
