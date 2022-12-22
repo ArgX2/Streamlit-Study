@@ -12,29 +12,30 @@ st.write("현재 설정 된 인원 수:",Num)
 NumList = list(range(Num))
 NameList = list(range(Num))
 
-Name = st.text_input('여기에 입력')
-st.write('이름 입력', Name)
+st.write('')
+
+Name = st.text_input('여기에 이름 입력')
+st.write(Name)
 
 Stack = 0
-if st.button('확인'):
-    NameList[Stack] = Name
-    Stack+=1
-else:
-    st.write('입력 후 클릭')
+for i in range(Num):
+    if st.button('확인',i):
+        NameList[Stack] = Name
+        Stack+=1
+    else:
+        st.write('입력 후 클릭')
     
-if st.button('초기화됨'):
+if st.button('초기화'):
     Stack=0
     NumList = [0 for i in range(Num)]
     NameList = ['-' for i in range(Num)]
 else:
     st.write('초기화')
 
+st.write('')
 
 option = st.selectbox(
     '위치 선택 후 변경',
     ('Email', 'Home phone', 'Mobile phone')
 )
 st.write('You selected:', option)
-
-
-
