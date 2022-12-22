@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import random
 from PIL import Image
-image = Image.open('alpago.jpg')
+img = Image.open('alpago.jpg')
 
 def Mix(L1, NL2, N):
     L1 = [0 for i in range(N)]
@@ -16,9 +16,9 @@ def Mix(L1, NL2, N):
 
 
 st.title("사다리타기")
-st.image(image)
+st.image(img)
 
-Num = st.slider('인원 입력 후 버튼 클릭.', 2, 50, 25)
+Num = st.slider('인원 입력 후 버튼 클릭.', 2, 50, 10)
 st.write("현재 설정 된 인원 수:",Num)
 NumList = [0 for i in range(Num)]
 NameList = list(range(Num))
@@ -57,6 +57,9 @@ else:
     NameList = [(i+1) for i in range(Num)]
 
 Open = 0
+st.write("리스트 1", NumList)
+st.write("리스트 2", NumList2)
+
 if st.button('MIX'): 
     Open = 1
     NumList2 = Mix(NumList, NumList2, Num)
