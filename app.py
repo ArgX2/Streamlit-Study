@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import random
 from PIL import Image
 image = Image.open('alpago.jpg')
 
@@ -42,15 +43,21 @@ if key:
 
     st.write('')
 else:
-    NameList = [int(i+1) for i in range(Num)] 
+    NameList = [chr(i+1)+"번" for i in range(Num)]
 
 
 if st.button('MIX'):
-        NameList = [chr(i+1)+"번" for i in range(Num)]
+    NumList2 = list()
+    for i in range(Num):
+        Sv = random.randrange(0,len(NumList)-1)
+        NumList2[i] = NumList[Sv]
+        del NumList[Sv]
+
+    NumList = NumList2
 
 option = st.selectbox(
         '위치 선택 후 변경',
         (NameList)
     )
 
-st.write('선택된 값의 수:', NumList[NameList.index(option)-1])
+st.write('선택된 값의 수:', NumList[NameList.index(option)])
