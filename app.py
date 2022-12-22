@@ -45,13 +45,15 @@ if key:
 else:
     NameList = [(i+1)+"번" for i in range(Num)]
 
-
-if st.button('MIX'):
-    NumList2 = list()
+def Mix():
+    NumList2 = []
     for i in range(Num):
         Sv = random.randrange(0,len(NumList)-1)
         NumList2[i] = NumList[Sv]
         del NumList[Sv]
+
+if st.button('MIX'):
+    Mix()
 
 
 option = st.selectbox(
