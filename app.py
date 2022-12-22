@@ -46,11 +46,11 @@ else:
 
 
 if st.button('MIX'):
-        NameList = [chr(i)+"번" for i in range(Num)]
+        NameList = [chr(i+1)+"번" for i in range(Num)]
 
 option = st.selectbox(
         '위치 선택 후 변경',
         (NameList)
     )
 
-st.write('선택된 값의 수:', chr(NumList[option-1]+60))
+st.write('선택된 값의 수:', NumList[NameList.index(option)-1])
