@@ -19,6 +19,7 @@ NameList = list(range(Num))
 st.write('')
 
 with 1:
+    disabled=st.session_state.disabled
     Stack = 0
 
     Name = st.text_input('여기에 이름 입력',Stack)
