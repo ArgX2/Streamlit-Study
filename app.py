@@ -82,10 +82,9 @@ if st.button('MIX'):
 
 
 
-st.write("")
+st.write(NumList2)
 option = st.multiselect(
         '대상 선택',
         (NameList)
     )
 st.write('선택된 대상에게 배정된 값:', NumList2[NameList.index(option)])
-
