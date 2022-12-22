@@ -43,7 +43,7 @@ if key:
 
     st.write('')
 else:
-    NameList = [(i+1)+"번" for i in range(Num)]
+    NameList = [(i+1) for i in range(Num)]
 
 def Mix():
     NumList2 = []
@@ -53,7 +53,7 @@ def Mix():
         del NumList[Sv]
 
 if st.button('MIX'):
-    Mix()
+    Mix()   
 
 
 option = st.selectbox(
