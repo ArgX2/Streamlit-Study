@@ -20,7 +20,7 @@ st.image(img)
 
 Num = st.slider('인원 입력 후 버튼 클릭.', 2, 50, 10)
 st.write("현재 설정 된 인원 수:",Num)
-NumList = [0 for i in range(Num)]
+NumList = [i for i in range(Num)]
 NameList = list(range(Num))
 NumList2 = list()
 
