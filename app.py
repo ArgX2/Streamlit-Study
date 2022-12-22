@@ -46,7 +46,7 @@ if key:
 else:
     NameList = [(i+1) for i in range(Num)]
 
-def Mix():
+def Mix(NumList, NumList2, Num):
     NumList = [0 for i in range(Num)]
     NumList2 = []
     for i in range(Num):
@@ -56,7 +56,7 @@ def Mix():
 
 Open = 0
 if st.button('MIX'):
-    Mix() 
+    Mix(NumList, NumList2, Num) 
     Open = 1
 
 if Open:
