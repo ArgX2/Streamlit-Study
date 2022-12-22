@@ -50,4 +50,4 @@ option = st.selectbox(
         (NameList)
     )
 
-st.write('선택된 값의 수:', chr(NumList[option]+60))
+st.write('선택된 값의 수:', chr(NumList[option-1]+60))
