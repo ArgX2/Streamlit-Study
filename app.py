@@ -28,6 +28,7 @@ if key:
         if st.button('이전'):
             NameList[Stack] = Name
             Stack-=1
+
     elif Stack >= Num-1:        
         if st.button('다음'):
             NameList[Stack] = Name
@@ -40,9 +41,12 @@ if key:
         NameList = ['-' for i in range(Num)]
 
     st.write('')
+else:
+    NumList = [int(i) for i in range(Num)]
+    NameList = [int(i) for i in range(Num)] 
 
 option = st.selectbox(
         '위치 선택 후 변경',
-        ('Email', 'Home phone', 'Mobile phone')
+        (NameList)
     )
-st.write('You selected:', option)
+st.write('선택된 값의 수:', NumList[option])
