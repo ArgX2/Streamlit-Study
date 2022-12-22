@@ -17,7 +17,6 @@ st.write("")
 key = st.checkbox("이름 수정하기")
 
 
-
 if key:
     
     Stack = 0
@@ -38,9 +37,8 @@ if key:
 
     st.write('')
 
-    option = st.selectbox(
+option = st.selectbox(
         '위치 선택 후 변경',
         ('Email', 'Home phone', 'Mobile phone')
     )
-
 st.write('You selected:', option)
