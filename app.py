@@ -47,6 +47,7 @@ else:
     NameList = [(i+1) for i in range(Num)]
 
 def Mix():
+    NumList = [0 for i in range(Num)]
     NumList2 = []
     for i in range(Num):
         Sv = random.randrange(0,len(NumList))
