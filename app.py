@@ -4,6 +4,7 @@ import numpy as np
 import random
 from PIL import Image
 img = Image.open('alpago.jpg')
+Open = 0
 
 def Mix(L1, NL2, N):
     L1 = [0 for i in range(N)]
@@ -56,14 +57,11 @@ if key:
 else:
     NameList = [(i+1) for i in range(Num)]
 
-Open = 0
-st.write("리스트 1", NumList)
+
 
 if st.button('MIX'): 
     Open = 1
     NumList2 = Mix(NumList, NumList2, Num)
-
-st.write("리스트 2", NumList2)
 
 if Open:
     option = st.selectbox(
@@ -71,6 +69,6 @@ if Open:
             (NameList)
         )
 
+    st.write("")
     st.write('선택된 값의 수:', NumList2[NameList.index(option)])
 
-    st.write("")
