@@ -12,7 +12,7 @@ def Mix(L1, NL2, N):
         Sv = random.randrange(0,len(L1))
         L2[i] = L1[Sv]
         del L1[Sv]
-    return L2    
+    return L2
 
 
 st.title("사다리타기")
@@ -22,7 +22,7 @@ Num = st.slider('인원 입력 후 버튼 클릭.', 2, 50, 25)
 st.write("현재 설정 된 인원 수:",Num)
 NumList = [0 for i in range(Num)]
 NameList = list(range(Num))
-NumList2 = []
+NumList2 = list()
 
 st.write("")
 
