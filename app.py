@@ -60,15 +60,14 @@ else:
 
 
 if st.button('MIX'): 
-    Open = 1
     NumList2 = Mix(NumList, NumList2, Num)
 
-if Open:
-    option = st.selectbox(
-            '위치 선택 후 변경',
-            (NameList)
-        )
 
-    st.write("")
-    st.write('선택된 값의 수:', NumList2[NameList.index(option)])
+option = st.selectbox(
+        '위치 선택 후 변경',
+        (NameList)
+    )
+
+st.write("")
+st.write('선택된 값의 수:', NumList2[NameList.index(option)])
 
