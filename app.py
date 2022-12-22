@@ -5,14 +5,14 @@ import random
 from PIL import Image
 image = Image.open('alpago.jpg')
 
-def Mix(NumList, NumList2, Num):
-    NumList = [0 for i in range(Num)]
-    NumList2 = []
-    for i in range(Num):
-        Sv = random.randrange(0,len(NumList))
-        NumList2[i] = NumList[Sv]
-        del NumList[Sv]
-    return NumList2    
+def Mix(L1, NL2, N):
+    L1 = [0 for i in range(N)]
+    L2 = []
+    for i in range(N):
+        Sv = random.randrange(0,len(L1))
+        L2[i] = L1[Sv]
+        del L1[Sv]
+    return L2    
 
 
 st.title("사다리타기")
