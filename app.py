@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import random
-import spacy
+#import spacy
 from PIL import Image
 img = Image.open('alpago.jpg')  
 
