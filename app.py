@@ -37,9 +37,6 @@ if key:
 
     st.write("현재 대상 - ", Stack+1, "번째")
 
-    if st.button('확인'):
-            NameList[Stack] = Name
-
     if Stack > 0:
         if st.button('이전'):  
             Stack-=1
@@ -47,6 +44,11 @@ if key:
     elif Stack <= Num-1:        
         if st.button('다음'):
             Stack+=1
+
+    if st.button('확인'):
+        NameList[Stack] = Name
+
+        st.write(NameList)
 
         
     if st.button('초기화'):
