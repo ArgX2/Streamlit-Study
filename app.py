@@ -39,16 +39,13 @@ if key:
 
     if st.button('확인'):
             NameList[Stack] = Name
-            st.write("입력 됨",Name)
 
     if Stack > 0:
-        if st.button('이전'):
-            NameList[Stack] = Name
+        if st.button('이전'):  
             Stack-=1
 
     elif Stack <= Num-1:        
         if st.button('다음'):
-            NameList[Stack] = Name
             Stack+=1
 
         
@@ -71,4 +68,4 @@ if st.button('MIX'):
 
 if Open:
     for i in range(len(Select)):
-        st.write(Select[i],"번의 값 - ",NumList2[NameList.index(Select[i])])
+        st.write(Select[i],"의 값 - ",NumList2[NameList.index(Select[i])])
