@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import random
+import spacy
 from PIL import Image
 img = Image.open('alpago.jpg')  
 
@@ -56,9 +57,10 @@ if key:
 else:
     NameList = [str(i+1)+"번" for i in range(Num)]
 
-@st.cache(persist=True)
-def Load( NumList2):
-    return NumList2
+@st.cache(allow_output_mutation=True)
+def Load(NumList2):
+    Sth = spacy.load(NumList2)
+    return Sth
 
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
