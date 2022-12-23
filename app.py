@@ -33,8 +33,11 @@ if key:
     
     Stack = 0
 
-    Name = st.text_input('여기에 이름 입력',Stack)
-    st.write("이전에 입력된 값:", Name)
+    Name = st.text_input('여기에 이름 입력 - ',Stack+1,"번째")
+
+    if st.button('확인'):
+            NameList[Stack] = Name
+            st.write("입력 됨",Name)
 
     if Stack > 0:
         if st.button('이전'):
