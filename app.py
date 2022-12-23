@@ -35,6 +35,8 @@ if key:
 
     Name = st.text_input('여기에 이름 입력 - ',Stack+1,"번째")
 
+    st.write(NameList)
+
     if st.button('확인'):
             NameList[Stack] = Name
             st.write("입력 됨",Name)
