@@ -48,7 +48,7 @@ if key:
     if st.button('확인'):
         NameList[Stack] = Name
 
-        st.write(NameList)
+    st.write(NameList)
 
         
     if st.button('초기화'):
