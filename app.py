@@ -66,4 +66,4 @@ Select = st.multiselect("알고싶은 대상 선택", NameList)
 
 if Open:
     for i in range(len(Select)):
-        st.write(Select[i],"번의 값 - :,NumList2[NameList.index(Select[i])])
+        st.write(Select[i],"번의 값 - ",NumList2[NameList.index(Select[i])])
