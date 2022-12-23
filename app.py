@@ -57,12 +57,12 @@ else:
     NameList = [str(i+1)+"번" for i in range(Num)]
 
 Open = 0    
+    
+Select = st.multiselect("알고싶은 대상 선택", NameList)
+
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
     Open = 1
-
-        
-Select = st.multiselect("알고싶은 대상 선택", NameList)
 
 if Open:
     for i in range(len(Select)):
