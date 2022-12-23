@@ -59,6 +59,9 @@ else:
 
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
+    Dict = {}
+    for i in range(Num):
+        Dict[NameList[i]] = NumList2[i]
                    
 
-st.dataframe(NumList2)
+st.dataframe(Dict)
