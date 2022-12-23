@@ -61,4 +61,4 @@ if st.button('MIX'):
     NumList2 = Mix(NumList, NumList2, Num)
                    
 
-st.write(NumList2)
+st.dataframe(NumList2)
