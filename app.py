@@ -35,7 +35,7 @@ if key:
 
     Name = st.text_input('여기에 이름 입력')
 
-    st.write("현재 대상 - ", NameList)
+    st.write("현재 대상 - ", Stack+1, "번째")
 
     if st.button('확인'):
             NameList[Stack] = Name
