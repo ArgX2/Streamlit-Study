@@ -48,7 +48,8 @@ if key:
     if st.button('확인'):
         NameList[Stack] = Name
 
-    st.write(NameList)
+    if st.button("입력된 값 확인"):
+        st.write(NameList)
 
         
     if st.button('초기화'):
