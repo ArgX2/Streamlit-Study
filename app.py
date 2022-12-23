@@ -57,10 +57,10 @@ if key:
 else:
     NameList = [str(i+1)+"번" for i in range(Num)]
 
-@st.cache(allow_output_mutation=True)
-def Load(NumList2):
-    Sth = spacy.load(NumList2)
-    return Sth
+#@st.cache(allow_output_mutation=True)
+#def Load(NumList2):
+#    Sth = spacy.load(NumList2)
+#    return Sth
 
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
