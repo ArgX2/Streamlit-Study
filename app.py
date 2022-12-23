@@ -56,6 +56,9 @@ if key:
 else:
     NameList = [str(i+1)+"번" for i in range(Num)]
 
+@st.cache(persist=True)
+def Load( NumList2):
+    return NumList2
 
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
