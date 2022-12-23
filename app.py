@@ -51,7 +51,7 @@ if key:
     if st.button('초기화'):
         Stack=0
         NumList = [0 for i in range(Num)]
-        NameList = ['-' for i in range(Num)]
+        #NameList = ['-' for i in range(Num)]
 
     st.write('')
 else:
