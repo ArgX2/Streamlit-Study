@@ -63,4 +63,4 @@ if st.button('MIX'):
 Select = st.multiselect("알고싶은 대상 선택", NameList)
 
 for i in range(len(Select)):
-    st.write(NameList[Select[i]])
+    st.write(NumList[Select[i]])
