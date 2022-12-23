@@ -29,6 +29,10 @@ st.write("")
 
 key = st.checkbox("이름 수정하기")
 
+@st.cache(suppress_st_warning=True)  # 👈 Changed this
+def Data_Saver(a):
+    return a
+
 if key:
     
     Stack = 0
@@ -40,13 +44,16 @@ if key:
     if Stack > 0:
         if st.button('이전'):  
             Stack-=1
+            Stack = Data_Saver(Stack)
 
     elif Stack <= Num-1:        
         if st.button('다음'):
             Stack+=1
+            Stack = Data_Saver(Stack)
 
     if st.button('확인'):
         NameList[Stack] = Name
+        NameList = Data_Saver(NameList)
 
     if st.button("입력된 값 확인"):
         st.write(NameList)
@@ -55,19 +62,25 @@ if key:
     if st.button('초기화'):
         Stack=0
         NumList = [0 for i in range(Num)]
+        NumList = Data_Saver(NumList)
         #NameList = ['-' for i in range(Num)]
 
     st.write('')
 else:
     NameList = [str(i+1)+"번" for i in range(Num)]
+    NameList = Data_Saver(NameList)
 
-Open = 0    
+Open = 0
+Open = Data_Saver(Open)    
     
 Select = st.multiselect("알고싶은 대상 선택", NameList)
+Select = Data_Saver(Select)
 
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
+    NumList2 = Data_Saver(NumList2)
     Open = 1
+    Open = Data_Saver(Open)
 
 if Open:
     for i in range(len(Select)):
