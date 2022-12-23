@@ -54,7 +54,7 @@ if key:
 
     st.write('')
 else:
-    NameList = [(i+1) for i in range(Num)]
+    NameList = [str(i+1)+"번" for i in range(Num)]
 
 
 if st.button('MIX'): 
