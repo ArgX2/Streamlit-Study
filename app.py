@@ -59,10 +59,6 @@ else:
 
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
-    Dict = {}
-    for i in range(Num):
-
-                   
 
 Select = st.multiselect("알고싶은 대상 선택", NameList)
 
