@@ -64,4 +64,6 @@ if st.button('MIX'):
         Dict[NameList[i]] = NumList2[i]
                    
 
-st.dataframe(Dict)
+Select = st.multiselect("알고싶은 대상 선택", NameList)
+
+st.write(Dict[Select])
