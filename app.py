@@ -62,6 +62,7 @@ def Load( NumList2):
 
 if st.button('MIX'): 
     NumList2 = Mix(NumList, NumList2, Num)
+    NumList2 = Load(NumList2)
 
         
 Select = st.multiselect("알고싶은 대상 선택", NameList)
